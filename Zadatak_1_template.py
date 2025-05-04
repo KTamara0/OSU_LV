@@ -1,3 +1,34 @@
+'''
+Zadatak 9.4.1 Skripta Zadatak_1.py ucitava CIFAR-10 skup podataka. Ovaj skup sadrži ˇ
+50000 slika u skupu za ucenje i 10000 slika za testiranje. Slike su RGB i rezolucije su 32x32. ˇ
+Svakoj slici je pridružena jedna od 10 klasa ovisno koji je objekt prikazan na slici. Potrebno je:
+1. Proucite dostupni kod. Od kojih se slojeva sastoji CNN mreža? Koliko ima parametara ˇ
+mreža?
+2. Pokrenite ucenje mreže. Pratite proces u ˇ cenja pomo ˇ cu alata Tensorboard na sljede ´ ci na ´ cin.
+Pokrenite Tensorboard u terminalu pomocu naredbe: ´
+tensorboard –logdir=logs
+i zatim otvorite adresu http://localhost:6006/ pomocu web preglednika. ´
+3. Proucite krivulje koje prikazuju to ˇ cnost klasi ˇ fikacije i prosjecnu vrijednost funkcije gubitka ˇ
+na skupu podataka za ucenje i skupu podataka za validaciju. Što se dogodilo tijekom u ˇ cenja ˇ
+mreže? Zapišite tocnost koju ste postigli na skupu podataka za testiranje.
+
+Zadatak 9.4.2 Modificirajte skriptu iz prethodnog zadatka na nacin da na odgovaraju ˇ ca mjesta u ´
+mrežu dodate droput slojeve. Prije pokretanja ucenja promijenite Tensorboard funkciju povratnog ˇ
+poziva na nacin da informacije zapisuje u novi direktorij (npr. ˇ =/log/cnn_droput). Pratite tijek
+ucenja. Kako komentirate utjecaj ˇ dropout slojeva na performanse mreže?
+
+Zadatak 9.4.3 Dodajte funkciju povratnog poziva za rano zaustavljanje koja ce zaustaviti proces ´
+ucenja nakon što se 5 uzastopnih epoha ne smanji prosje ˇ cna vrijednost funkcije gubitka na ˇ
+validacijskom skupu.
+
+Zadatak 9.4.4 Što se dogada s procesom u ¯ cenja: ˇ
+1. ako se koristi jako velika ili jako mala velicina serije? ˇ
+2. ako koristite jako malu ili jako veliku vrijednost stope ucenja? ˇ
+3. ako izbacite odredene slojeve iz mreže kako biste dobili manju mrežu? ¯
+4. ako za 50% smanjite velicinu skupa za u ˇ cenje?
+'''
+
+
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
